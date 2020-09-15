@@ -14,6 +14,8 @@ aim = vector(0, -10)
 color = random.choice(['black', 'yellow', 'magenta', 'blue', 'purple'])
 #>>>>>>> RandomColors
 
+
+               
 def change(x, y):
     "Change snake direction."
     aim.x = x
@@ -25,6 +27,7 @@ def inside(head):
 
 def move():
     "Move snake forward one segment."
+
     head = snake[-1].copy()
     head.move(aim)
 
@@ -42,7 +45,8 @@ def move():
         food.y = randrange(-15, 15) * 10
     else:
         snake.pop(0)
-
+        MC=vector(randrange(-1, 2),randrange(-1, 2))*10
+        food.move(MC)
     clear()
 
 #<<<<<<< HEAD
