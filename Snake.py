@@ -9,7 +9,7 @@ import random
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
-<<<<<<< HEAD
+#<<<<<<< HEAD
 
 color = random.choice(['black', 'yellow', 'magenta', 'blue', 'purple'])
 #>>>>>>> RandomColors
@@ -45,7 +45,7 @@ def move():
 
     clear()
 
-<<<<<<< HEAD
+#<<<<<<< HEAD
     for body in snake:
         square(body.x, body.y, 9, 'black')
 
