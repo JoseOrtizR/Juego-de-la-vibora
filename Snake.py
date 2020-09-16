@@ -44,9 +44,35 @@ def move():
         food.x = randrange(-15, 15) * 10
         food.y = randrange(-15, 15) * 10
     else:
+        #Aquí se define el movimiento aleatorio de la comida. Se utilizó un IF con diferentes condiciones para evitar que se salga de la caja.
         snake.pop(0)
-        MC=vector(randrange(-1, 2),randrange(-1, 2))*10
-        food.move(MC)
+        if food.x==190 and food.y==190:
+            MC=vector(randrange(-1, 1),randrange(-1, 1))*10
+            food.move(MC)
+        elif food.x==-190 and food.y==-190:
+            MC=vector(randrange(0, 2),randrange(0, 2))*10
+            food.move(MC)
+        elif food.x==190 and food.y==-190:
+            MC=vector(randrange(-1, 1),randrange(0, 2))*10
+            food.move(MC)
+        elif food.x==-190 and food.y==190:
+            MC=vector(randrange(0, 2),randrange(-1, 1))*10
+            food.move(MC)
+        elif food.x==190:
+            MC=vector(randrange(-1, 1),randrange(-1, 2))*10
+            food.move(MC)
+        elif food.x==-190:
+            MC=vector(randrange(0, 2),randrange(-1, 2))*10
+            food.move(MC)
+        elif food.y==190:
+            MC=vector(randrange(-1, 2),randrange(-1, 1))*10
+            food.move(MC)
+        elif food.y==-190:
+            MC=vector(randrange(-1, 2),randrange(0, 2))*10
+            food.move(MC)
+        else:
+            MC=vector(randrange(-1, 2),randrange(-1, 2))*10
+            food.move(MC)
     clear()
 
 #<<<<<<< HEAD
