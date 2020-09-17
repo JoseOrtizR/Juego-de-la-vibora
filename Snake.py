@@ -12,6 +12,7 @@ aim = vector(0, -10)
 #<<<<<<< HEAD
 
 color = random.choice(['black', 'yellow', 'magenta', 'blue', 'purple'])
+colores = random.choice(['black', 'yellow', 'magenta', 'blue', 'purple'])
 #>>>>>>> RandomColors
 
 
@@ -83,7 +84,7 @@ def move():
         square(body.x, body.y, 9, color) #falta ponerle color al body
 #>>>>>>> RandomColors
 
-    square(food.x, food.y, 9, 'green')
+    square(food.x, food.y, 9, colores)
     update()
     ontimer(move, 100)
 
